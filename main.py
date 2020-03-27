@@ -24,8 +24,10 @@ print(even_nums)
 print(odd_nums)
 
 
+def say_hi(name):
+    return f'Hello {name}'
 
-
+say_hi('Gabi')
 
 
 
