@@ -36,5 +36,69 @@ x = 35e3
 print(float(x))
 # e este puterea 10 iar numarul de dupa e de cate ori la puterea 10 adica cati de zero dupa inclusiv la numerele cratiponale cmuta singur virgula 
 
-z = -87.7e100
-print(float(z))
+# random - genereaza un numar aleatoriu in intervalul dat 
+# randrange (start, stop, step) nu ia în considerare ultimul articol, 
+# adică este exclusiv. De exemplu, randrange (10,20,1) 
+# va returna orice număr aleatoriu de la 10 la 19 (exclusiv). 
+# nu va selecta niciodată 20
+# start = nr pornire
+# stop = nr final
+# step = step este o diferență între fiecare număr din secvență. 
+# Etapa este parametrii opționali. 
+# Valoarea implicită a pasului este 1 dacă nu este specificată.
+#        - un argument nr generat intre 0 si 100
+#        - doua argumente
+#        - trei argumente
+import random
+print(random.randrange(100))
+print(random.randrange(30, 70))
+print(random.randrange(30, 70 ,3))
+#Pentru a genera un număr float aleator, 
+# utilizați funcția random.uniform () .
+print(random.uniform(-1, 0))
+
+
+# string
+d = """Rana mea de Maramures, rana mea de alta tara
+Cum ma lasi de unul singur, cum ma uiti, cum te-oi uita
+Intr-un fotograf la Roma, moartea s-a retras sa moara
+s-au smintit de tot poetii, eu nu vad faptura ta."""
+print(d)
+
+# String and Arrays
+# - da-mi przitia literei 1 incepe numaratoarea de la0 si zero e pozitie
+print(d[1])
+# da-mi pozitiile literelor de la 10 la 15
+print(d[10:15])
+# pe negative index va incepe numaratoarea de la coada la cap si incepe de lanr mai mare la mai mic adica invers
+print(d[-15:-10])
+
+# String Length = lungimea sirurilor numara tot si pauze si tot
+print(len(d))
+
+# String Methods
+# strip() muta spatiile albe de la inceput si sfarsit
+print(d.strip())
+# lower() - scrie cu  litere mici tot
+print(d.lower())
+# upper() - scrie tot cu litere mari
+print(d.upper())
+# replace() inlocuieste un sir cu altul, o litera cu alta
+print(d.replace("m", "d"))
+# split() - imparte sirul in subsiruri la separatorul pe care i-l dai de exemplu virgula
+print(d.split(","))
+
+# Check String
+m = 'ing' in d
+n = 'ing' not in d
+print(m)
+print(n)
+
+# String Format
+# nu putem combina numere cu litere decat folosind format()
+# metoda format poate avea o multime de argumente
+quantity = 3
+itemo = 788 - orhidee
+price = 47.30
+my_order = "I want {} prices of item {} for {} £."
+print(my_order.format(quantity, itemo, price))
